@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio de Luan Henrique</title>
+</head>
+
+<body>
+    <!-- Links chamam função JS para mostrar seções -->
+    <header>
+        <h1>Luan Henrique</h1>
+        <nav>
+            <!-- Links chamam função JS para mostrar seções -->
+            <a onclick="showSection('sobre')">Sobre mim</a>
+            <a onclick="showSection('formacao')">Formação</a>
+            <a onclick="showSection('portfolio')">Portfólio</a>
+            <a onclick="showSection('contato')">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção "Sobre mim"-->
+        <section id="sobre" class="active">
+            <div class="ProfileImage-container">
+                <img class="ProfileImage" src="./public/me.jpg" alt="Foto Luan Henrique">
+            </div>
+            <h2>Sobre mim</h2>
+            <p>Sou Luan Henrique, desenvolvedor web apaixonado por tecnologia, games e crescimento pessoal. Tenho como
+                missão me tornar um programador e participar de um grande projeto que possa ajudar muitas pessoas.
+                Meus hobbies incluem treinar, estudar idiomas (como japonês), aprender sobre negócios,
+                desenvolver jogos e criar projetos próprios como aplicativos e plataformas.</p>
+        </section>
+
+        <!-- Seção "Formação"-->
+        <section id="formacao">
+            <h2>Formação</h2>
+            <p>Atualmente estou cursando Análise e Desenvolvimento de Sistemas e tenho experiência prática com HTML,
+                CSS, JavaScript, TypeScript,
+                React, Node.js, Express e MongoDB. Também tenho noções de C# e desenvolvimento de jogos com Unity.
+                Trabalho na área como desenvolvedor web e no dia a dia tenho contato com novas tecnologias que só
+                agregam em minha experiência como um desenvolvedor.</p>
+            <br />
+            <p>
+                Além disso, também sou formado em eletromecânica pelo SENAI. Também Gosto muito de aprender novos
+                idiomas, por isso Sou fluente na lingua inglesa e atualmente venho estudando o idioma japonês.
+            </p>
+        </section>
+
+        <!-- Seção "Portifólio"-->
+        <section id="portfolio">
+            <h2>Portfólio</h2>
+            <p>
+                Como estou começando na área, tenho poucos projetos. Mas os principais são:
+                <br></br>
+            </p>
+            <ul>
+                <li>
+                    <a href="https://github.com/Lhenrick/QuickPost" target="_blank"><strong>QuickPost</strong> -
+                        Rede social estilo
+                        Twitter</a>
+                    <div class="ProjectImage-container">
+                        <img src="./public/Quickpost.png" alt="Imagem do login do projeto Quickpost">
+                    </div>
+                    <p>Um projeto que teve o objetivo de ser uma rede social similar ao twitter, onde o usuario pode
+                        postar seus pensamentos e opiniões. Para desenvolve-lo usei React, Node, Mongo DB e Tailwind
+                        para a estilização</p>
+
+                </li>
+                <br></br>
+                <li>
+                    <a href="https://github.com/Lhenrick/PokeGotchi" target="_blank"><strong>PokeGotchi</strong> -
+                        Jogo de terminal do Pokemon</a>
+                    <div class="ProjectImage-container">
+                        <img src="./public/pokegotchi.png" alt="Imagem do jogo pokegotchi no terminal">
+                    </div>
+                    <p>Pokegotchi é um simples jogo de terminal onde o usuario pode escolher um pokemon e interagir com
+                        ele como nos antigos jogos "tamagotchi".
+                    </p>
+
+                </li>
+            </ul>
+        </section>
+
+        <!-- Seção "Contato" com formulário -->
+        <section id="contato">
+            <h2>Contato</h2>
+            <form>
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+    <script>
+        // Script para alternar entre seções
+        function showSection(id) {
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
